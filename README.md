@@ -1,4 +1,4 @@
-# stinxbug.github.io
+# stinkbugx.github.io
 
 ## Projects
 * HTML
