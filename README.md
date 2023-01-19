@@ -6,7 +6,7 @@
 * JS
 <!-- Links can be added with [text](link) -->
 ## In-Class Assignments
-* ICA1
+* [ICA1](https://docs.google.com/document/d/19QFPeDpvm_zxbZ9z_aUM0-jzictsa9rW4TRNQJ_JJwQ/edit?usp=sharing)
 * ICA2
 * ICA3
 * ICA4
