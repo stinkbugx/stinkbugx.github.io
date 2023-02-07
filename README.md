@@ -6,10 +6,11 @@
 * JS
 <!-- Links can be added with [text](link) -->
 ## In-Class Assignments
+<!-- https://stinkbugx.github.io/ica/ica?.html -->
 * [ICA1](ica/ICA1.pdf)
 * [ICA2](ica/ICA2.pdf)
 * [ICA3](ica/ica3a.html)
-* ICA4
+* [ICA4](ica/ica4.html)
 * ICA5
 * ICA6
 * ICA7
@@ -23,9 +24,10 @@
 * ICA15
 
 ## Weekly Assignments
-* [WA1](https://stinkbugx.github.io/wa/wa1.html)
-* [WA2](https://stinkbugx.github.io/wa/wa2.html)
-* [WA3](https://stinkbugx.github.io/wa/wa3.html)
+<!-- https://stinkbugx.github.io/wa/wa?.html -->
+* [WA1](wa/wa1.html)
+* [WA2](wa/wa2.html)
+* [WA3](wa/wa3.html)
 * WA4
 * WA5
 * WA6
