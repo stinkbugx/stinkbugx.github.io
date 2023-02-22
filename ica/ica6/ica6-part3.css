@@ -1,0 +1,44 @@
+#narrowScreen {
+    background-color: green;
+
+}
+
+@media only screen and (max-width: 600px) {
+   #narrowScreen {
+    background-color: purple;
+   }
+}
+
+#wideScreen {
+    background-color: red;
+
+}
+
+@media not (max-width: 800px) {
+    #wideScreen {
+     background-color: lightblue;
+    }
+ }
+
+#shortScreen {
+    background-color: turquoise;
+
+}
+
+@media only screen and (max-height: 500px) {
+    #shortScreen {
+     background-color: yellow;
+    }
+ }
+
+#tallScreen {
+    background-color: lavender;
+
+}
+
+@media not (max-height: 800px) {
+    #tallScreen {
+     background-color: orange;
+    }
+ }
+ /* This was tested with a max height of 200px because my computer won't allow me to make the screen bigger than 800px */
