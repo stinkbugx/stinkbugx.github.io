@@ -16,7 +16,7 @@
 * [ICA4](https://stinkbugx.github.io/ica/ica4.html)
 * [ICA5](https://stinkbugx.github.io/ica/ica5/ica5.html)
 * [ICA6](https://stinkbugx.github.io/ica/ica6/ica6-part1.html)
-* ICA7
+* [ICA7](https://stinkbugx.github.io/ica/ica7/ica7.html)
 * ICA8
 * ICA9
 * ICA10
