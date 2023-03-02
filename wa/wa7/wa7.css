@@ -1,0 +1,149 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: rgb(233, 179, 188);
+    animation: outline 10s infinite;
+}
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color:black;
+}
+
+@keyframes outline {
+    0%{
+        background-color: red;
+    }
+    20%{
+        background-color: yellow;
+    }
+    40%{
+        background-color: green;
+    }
+    60%{
+        background-color: blue;
+    }
+    80%{
+        background-color: purple;
+    }
+    100%{
+        background-color: red;
+    }
+}
+
+#shaved{
+    width: 30vw;
+    height: 30vh;
+    transition-duration: 2s;
+}
+
+#shaved:hover {
+    height: 50vh;
+    
+}
+
+#tbh1{
+    width: 5vw;
+    animation: shuffle1 11s infinite;
+}
+
+#tbh2{
+    width: 5vw;
+    animation: shuffle1 10s infinite;
+}
+
+#tbh3{
+    width: 5vw;
+    animation: shuffle1 8s infinite;
+}
+
+#tbh4{
+    width: 5vw;
+    animation: shuffle1 5s infinite;
+}
+
+#tbh5{
+    width: 5vw;
+    animation: shuffle1 1s infinite;
+}
+
+@keyframes shuffle1{
+    0%{
+        margin-left: 50%
+    }
+    25% { 
+        margin-left: 0%;
+    } 
+    50% {
+        margin-left: -50%;
+    }
+    75% {
+        margin-left: 0%
+    }
+    100% {
+        margin-left: 50%;
+    }
+}
+
+#tbh6{
+    width: 5vw;
+    animation: shuffle2 5s infinite;
+}
+
+#tbh7{
+    width: 5vw;
+    animation: shuffle1 5s infinite;
+}
+
+#tbh8{
+    width: 5vw;
+    animation: shuffle2 5s infinite;
+}
+
+#tbh9{
+    width: 5vw;
+    animation: shuffle1 5s infinite;
+}
+
+
+@keyframes shuffle2{
+    0%{
+        margin-right: 50%
+    }
+    25% { 
+        margin-right: 0%;
+    } 
+    50% {
+        margin-right: -50%;
+    }
+    75% {
+        margin-right: 0%
+    }
+    100% {
+        margin-right: 50%;
+    }
+}
+
+
+/* Do the following by editing the HTML/CSS files (this is the minimum requirements for this assignment):
+
+Please change the color scheme -- change the color of the text, nav bar, ball, and background.
+Please change the image to something you like... perhaps it should align with the color changes you make in step 1? Your choice.
+Please change the font of the text on the screen.
+Please change the title to something other than "Put Your Title Here"
+Please animate something using the :hover pseudo-class.
+Please animate something using a transition. */
