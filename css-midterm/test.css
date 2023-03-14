@@ -25,25 +25,19 @@ nav {
 }
 
 nav a {
-    margin-top: 10px;
-    margin-bottom: 20px;
     width:10vw;
     text-align: center;
     text-decoration: none;
     color:black;
 }
 
-nav img {
-    max-width: 10vw;
-    position: relative;
-}
 /* 
 .bug3 {
     transform: rotate(29deg);
 } */
 
 nav a:hover {
-    transform: rotate(360deg);
+    color: azure;
     transition-duration: 2s;
 }
 
