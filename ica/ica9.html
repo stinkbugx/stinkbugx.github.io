@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Elements</title>
+    <style>
+        #button {
+            border: 10px solid green;
+            border-radius: 10px;
+            background-color: aquamarine;
+            padding: 15px 35px;
+            width: 150px;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        p {
+            /* if the font size is in p selector instead of #button it won't apply to the java changes
+            font-size: 35px; */
+        }
+    </style>
+</head>
+<body>
+    <div id="button">
+        <p>Click me!</p>
+    </div>
+
+    <script>
+        //script goes here
+        console.log("Hello, World!") //quick test that shows up in debug console
+        let button = document.querySelector("#button"); //variable name does not need to match id name
+        //test with console.log(button);
+
+        let html = document.querySelector("html");
+
+        function changeButton() { //typically function should be declared before it is called, but placing it after will still run
+            console.log("change ran");
+            alert("wweeeewoooweewooo you have hovered over the button " + sirenCount + " times");
+        }
+
+        button.addEventListener('click', changeButton); //(what event it listens for, what happens if event occurs)
+        //works with '' or "" for the event
+
+        let sirenCount = 0;
+        function siren() { 
+            sirenCount++;
+            console.log(sirenCount);
+            console.log("this worked!"); //used to test click
+            button.textContent = "hi"; //use = instead of () because it isn't a function
+            button.style.backgroundColor = "blue";
+            button.style.border = "3px dashed aqua";
+            button.style.color = "white";
+        }
+
+        button.addEventListener("mouseover", siren);
+
+        function rave() {
+            html.style.backgroundColor = "red";
+        }
+
+        window.addEventListener("resize", rave);
+    </script>
+</body>
+</html>
