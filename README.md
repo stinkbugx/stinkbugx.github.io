@@ -39,7 +39,7 @@
 * [WA7](https://stinkbugx.github.io/wa/wa7/wa7.html)
 * [WA9](https://stinkbugx.github.io/wa/wa9/wa9.html)
 * [WA10](https://stinkbugx.github.io/wa/wa10/wa10.html)
-* WA11
+* [WA11](https://stinkbugx.github.io/wa/wa11/wa11.html)
 * WA12
 * WA13
 * WA14

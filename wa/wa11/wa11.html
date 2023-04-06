@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wa11.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <header>Dog Generator</header>
+        <section class="images">
+          <img class="cat-img" src="miku1.png" alt="Dog img or gif">
+        </section>
+        <section class="controls" >
+          <button type="button" id="js-new cat" class="new-cat button">
+            Dog
+          </button>
+        </section>
+        <section class="explanation">
+            <p>
+                For this assignment most of the modifications are done on the backend. This API returns a file size and a url,
+                and there is no further documentation on it. Unfortunately, some of the urls generated are .mp4 or .webm, which
+                does not work with the HTML img's. So I had to add a part of my function that splits the url string, checks the
+                end of the url for .mp4 or .webm, and regenerates to url if it finds either. After the url is tested then it can
+                be sent to be displayed. The starting image is Miku because I already had that available from the last assignment.
+                There are also several small formatting changes.
+            </p>
+        </section>
+      </div>
+      <script src="wa11.js"></script>
+</body>
+</html>
