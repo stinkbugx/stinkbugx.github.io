@@ -27,11 +27,11 @@ btn.addEventListener('click', onOff);
 function onOff(){
     if (btn.getAttribute('class') == 'dark'){
         btn.setAttribute('class', 'light');
-        btn.textContent = "Lighten";
+        btn.textContent = "Wake up";
         overlay.style.backgroundColor = "rgba(0,0,0,0.5)";
     } else {
         btn.setAttribute('class', 'dark');
-        btn.textContent = "Darken";
+        btn.textContent = "Bedtime";
         overlay.style.backgroundColor = "rgba(0,0,0,0)";
     }
 }
