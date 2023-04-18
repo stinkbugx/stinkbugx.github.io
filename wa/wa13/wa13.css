@@ -1,0 +1,21 @@
+/* Personal CSS
+html {
+    background-color: rgb(93, 185, 185);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 20vw;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 60vw;
+    height: 100vh;
+    margin: 0;
+    padding-top: 50px;
+} */
+
+.buttonTest {
+    visibility: hidden;
+}

@@ -1,9 +1,33 @@
+// If using canvas:
+// const canvas = document.querySelector('canvas');
+// const ctx = canvas.getContext('2d');
+
+// const width = canvas.width = window.innerWidth * 0.6;
+// const height = canvas.height = window.innerHeight * 0.8;
+
+// function loop() {
+//     ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+//     ctx.fillRect(0, 0, width, height);
+  
+//     requestAnimationFrame(loop);
+// }
+
+// loop();
+const story = document.querySelector('#test1');
+const randomize = document.querySelector('.randomize');
+randomize.addEventListener('click', result);
+
+function result() {
+    story.textContent = "hi";
+    story.style.visibility = 'visible';
+}
+
 function check() {
     console.log('test');
 }
 
 function submit() {
-    alert(output.textContent);
+    alert("your volume is now " + output.textContent);
 }
 
 function reset() {
@@ -33,7 +57,7 @@ function random() {
 function randomNumber(min, max) {
     const num = Math.floor(Math.random() * (max - min + 1)) + min;
     return num;
-  }
+}
 
 
 
@@ -62,11 +86,16 @@ function updateOutput() {
 
 
 var slider = document.getElementById("myRange");
-var sliderSubmit = document.querySelector(".slider-submit-button").addEventListener('click', update);
+slider.addEventListener('click', update);
+var sliderSubmit = document.querySelector(".slider-submit-button").addEventListener('click', slideSubmit);
 var sliderOutput = document.querySelector(".slider-output");
 
 
 // Update the current slider value (each time you drag the slider handle)
 function update() {
   sliderOutput.textContent = slider.value;
+}
+
+function slideSubmit() {
+    alert("your volume is now " + sliderOutput.textContent);
 }
