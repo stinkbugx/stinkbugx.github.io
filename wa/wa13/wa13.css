@@ -16,6 +16,15 @@ body {
     padding-top: 50px;
 } */
 
-.buttonTest {
-    visibility: hidden;
+.volume {
+    padding: 30px;
+    padding-bottom: 0px;
+}
+
+.buttons {
+    padding-left: 30px;
+}
+
+.swap {
+    padding: 30px;
 }

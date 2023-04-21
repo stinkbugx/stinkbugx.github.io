@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Volume Changer Yippee</title>
 
     <link rel="stylesheet" href="wa13.css">
     <script defer src="wa13.js"></script> 
@@ -12,37 +12,18 @@
     Same effect as putting the script at the bottom of body  -->
 </head>
 <body>
-    <!-- My project
-    <h1>Catch the volume</h1>
-    <button type="button" id="js-start">
-        Start Game
-    </button> -->
-    <!-- <canvas></canvas> -->
+    <div class="volume"> 
+        <p>Current volume: </p>
+        <p class="output">0</p>
+    </div>
 
-    <!-- Components for class example below -->
-    <div> <!--Volume-->
-        <p>Select your volume</p>
-        <p class="output">50</p>
+    <div class="buttons">
+        <button class="button" id="butt1">Change volume</button>
     </div>
-    <div> <!--Plus/minus volume-->
-        <form>
-            <input class="minus-button" type="button" name="minus-button" value="MINUS">
-            <input class="plus-button" type="button" name="plus-button" value="PLUS">
-            <input class="reset-button" type="button" name="reset-button" value="RESET">
-            <input class="random-button" type="button" name="random-button" value="RANDOM">
-            <input class="submit-button" type="button" name="submit-button" value="SUBMIT">
-        </form>
+    <div class="swap">
+        <button id="restart">Restart</button>
+        <button id="submit">Submit</button>
     </div>
-    <div> <!--Slider volume-->
-        <div class="slidecontainer">
-            <p>Please select the volume you'd like.</p>
-            <input type="range" min="0" max="100" class="slider" id="myRange">
-            <input class="slider-submit-button" type="button" name="slider-submit-button" value="SUBMIT">
-            <p class="slider-output">50</p>
-        </div>
-        
-        <button class="randomize">Generate compliment</button>
-        <button class="buttonTest" id="test1"></button>
-    </div>
+    <div class="congrats"></div>
 </body>
 </html>
