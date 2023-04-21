@@ -45,11 +45,23 @@ function swap(){
 }
 
 function submit() {
-    // if (submitButt.textContent == "Restart"){
-    //     alert("restart test");
-    // } else {
-    //     alert("submit test");
-    // }
+    if (submitButt.textContent == "Restart"){
+        let element = document.getElementById('butt1');
+        console.log("restart ran");
+        for (i=2; i<=buttonCount; i++){
+            console.log("for loop: " + i);
+            element = document.getElementById('butt' + i);
+            if (element !== null) {
+                console.log("if entered");
+                element.remove();
+            }
+        }
+        buttonCount = 1;
+        volumeOutput.textContent = 0;
+    } else {      
+        alert("Sorry Anthony");
+        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    }
 }
 
 function restart() {
