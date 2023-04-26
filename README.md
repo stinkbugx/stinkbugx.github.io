@@ -1,8 +1,8 @@
 # stinkbugx.github.io
 
 ## Projects
-* HTML
-* CSS
+* [HTML](https://stinkbugx.github.io/html-midterm/page1.html)
+* [CSS](https://stinkbugx.github.io/index.html)
 * JS
 <!-- Links can be added with [text](link) -->
 ## In-Class Assignments
@@ -21,8 +21,6 @@
 * [ICA10](https://stinkbugx.github.io/ica/ica10/ica10.html)
 * [ICA11](https://stinkbugx.github.io/ica/ica11/ica11.html)
 * [ICA12](https://stinkbugx.github.io/ica/ica12/ica12.html)
-* ICA13
-* ICA14
 * ICA15
 
 ## Weekly Assignments
@@ -42,5 +40,5 @@
 * [WA11](https://stinkbugx.github.io/wa/wa11/wa11.html)
 * [WA12](https://stinkbugx.github.io/wa/wa12/wa12.html)
 * [WA13](https://stinkbugx.github.io/wa/wa13/wa13.html)
-* WA14
+* [WA14](https://stinkbugx.github.io/wa/wa14.html)
 * WA15
