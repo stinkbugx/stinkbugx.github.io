@@ -3,7 +3,7 @@
 ## Projects
 * [HTML](https://stinkbugx.github.io/html-midterm/page1.html)
 * [CSS](https://stinkbugx.github.io/index.html)
-* JS
+* [JS](https://stinxbug.me/js-midterm/idea2.html)
 <!-- Links can be added with [text](link) -->
 ## In-Class Assignments
 <!--
