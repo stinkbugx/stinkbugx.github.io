@@ -34,6 +34,7 @@ function gameStart() {
             let currentButtName = "#butt" + (i + 1); 
             let currentButt = document.querySelector(currentButtName);
             currentButt.textContent = "";
+            currentButt.disabled = false;
         }
     }
     //I could probably do a for loop here but the variable names are giving me a headache

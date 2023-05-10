@@ -7,22 +7,7 @@ setup.addEventListener('click', makeButtons);
 
 function makeButtons() {
     for (i=0; i<9; i++){
-        let newGrid = document.createElement('div');
-        gridGrid.appendChild(newGrid);
-        // newGrid.setAttribute('id', "grid" + (i+1));
-        newGrid.setAttribute('class', "buttonGrid");
         for(j=0; j<9; j++){
-            let newButton = document.createElement('button');
-            newGrid.appendChild(newButton);
-            //newButton.textContent = i + "" + j ;
-            // newButton.textContent = "";
-            // newButton.setAttribute('id', "butt" + i + "" + j);
-            newButton.setAttribute('class', "grid-item");
-            if (j == i){
-                newButton.textContent = "X";
-            } else {
-                newButton.textContent = ".";
-            }
             for (a=0; a<9; a++){
                 let newGrid = document.createElement('div');
                 gridGrid.appendChild(newGrid);
