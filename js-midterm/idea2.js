@@ -1,13 +1,13 @@
 const start = document.querySelector('#start');
 const buttGrid = document.querySelector('.button-grid');
 const instruct = document.querySelector('.instructions');
-const testArray = document.querySelector('#test');
+// const testArray = document.querySelector('#test');
 //const testWin = document.querySelector('#win');
 let ticValues = [];
 let turn = ""; //alternates between X and O
 
 start.addEventListener('click', gameStart);
-testArray.addEventListener('click', testVal);
+// testArray.addEventListener('click', testVal);
 //testWin.addEventListener('click', checkWin);
 buttGrid.addEventListener('click', winCondition);
 
@@ -212,26 +212,26 @@ function change9() {
     }
 }
 
-function testVal() { //just for me to see what the computer believes the game to be
-    if (ticValues.length == 0){ //if array is empty
-        console.log("Empty array"); 
-    } else {
-        // for (i = 0; i < ticValues.length; i++){ //prints current array values
-        //     console.log(ticValues[i]);
-        // }
-        for (j = 0; j < 3; j++){ //makes a board with the values
-            let line = "";
-            for (i = (j*3); i < ((j*3)+3); i++){
-                if (ticValues[i] == "") {
-                    line = line + "#";
-                } else {
-                    line = line + ticValues[i];
-                }
-            }
-            console.log(line);
-        }
-    }
-}
+// function testVal() { //just for me to see what the computer believes the game to be
+//     if (ticValues.length == 0){ //if array is empty
+//         console.log("Empty array"); 
+//     } else {
+//         // for (i = 0; i < ticValues.length; i++){ //prints current array values
+//         //     console.log(ticValues[i]);
+//         // }
+//         for (j = 0; j < 3; j++){ //makes a board with the values
+//             let line = "";
+//             for (i = (j*3); i < ((j*3)+3); i++){
+//                 if (ticValues[i] == "") {
+//                     line = line + "#";
+//                 } else {
+//                     line = line + ticValues[i];
+//                 }
+//             }
+//             console.log(line);
+//         }
+//     }
+// }
 
 /* 
 012
