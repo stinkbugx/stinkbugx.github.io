@@ -13,7 +13,7 @@ buttGrid.addEventListener('click', winCondition);
 
 
 function gameStart() {
-    instruct.textContent = "Click any space to play an X, computer plays O's";
+    instruct.textContent = "Click any space to play, X's go first";
     winState = false;
     turn = "X"; //X's go first
     for (i = 0; i < 9; i++){ //for all array values
