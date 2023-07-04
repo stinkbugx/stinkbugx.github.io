@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Movement script</h2>
+    <p>
+        using UnityEngine; <br>
+public class Character : MonoBehaviour <br>
+{ <br>
+    private CharacterController characterController; <br>
+    public float Speed = 5f; <br>
+    void Start() <br>
+    { <br>
+        characterController = GetComponent<CharacterController>(); <br>
+    } <br>
+    void Update() <br>
+    { <br>
+        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")); <br>
+        characterController.Move(move * Time.deltaTime * Speed); <br>
+    } <br>
+}
+    </p>
+</body>
+</html>
