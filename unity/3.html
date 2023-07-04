@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Jump script</h1>
+    <p>public Rigidbody rb; <br>
+        public float jumpAmount = 10; <br>
+        void Update() <br>
+        { <br>
+            if (Input.GetKeyDown(KeyCode.Space)) <br>
+            { <br>
+                rb.AddForce(Vector3.up * jumpAmount, ForceMode3D.Impulse); <br>
+            } <br>
+        }</p>
+</body>
+</html>
