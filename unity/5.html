@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script for Health System</title>
+    <link rel="stylesheet" href="script.css">
+</head>
+<body>
+    <h1>Script for Health System</h1>
+        <p class="dent1">
+            using System.Collections; <br>
+            using System.Collections.Generic; <br>
+            using UnityEngine; <br>
+            <br>
+            public class Health : MonoBehaviour <br>
+            { 
+            </p>
+                <p class="dent2">
+                public int currentHealth; //variable for player's current health <br>
+                public int maxHealth = 100; //maximum health points possible <br>
+                void Start() <br>
+                {
+                </p>
+                    <p class="dent3">
+                    currentHealth = maxHealth;
+                    </p>
+                <p class="dent2">
+                } <br>
+                <br>
+                //function to take damage <br>
+                public void TakeDamage(int amount) <br>
+                {
+                </p>
+                    <p class="dent3">
+                    if (currentHealth - amount &gt;= 0)
+                    {
+                    </p>
+                        <p class="dent4">
+                        currentHealth = 0;
+                        </p>
+                    <p class="dent3">
+                    } else <br>
+                    {
+                    </p>
+                        <p class="dent4">
+                        currentHealth -= amount
+                        </p>
+                    <p class="dent3">
+                    }
+                    </p>
+                <p class="dent2">
+                } <br>
+                <br>
+                //function to heal damage <br>
+                public void HealDamage(int amount) <br>
+                {
+                </p>
+                    <p class="dent3">
+                    if (currentHealth + amount >= maxHealth) <br>
+                    {
+                    </p>
+                        <p class="dent4">
+                        currentHealth = maxHealth;
+                        </p>
+                    <p class="dent3">
+                    } <br>
+                    else <br>
+                    {
+                    </p>
+                        <p class="dent4">
+                        currentHealth += amount;
+                        </p>
+                    <p class="dent3">
+                    }
+                    </p>
+                <p class="dent2">
+                }
+                </p>
+            <p class="dent1">
+            }
+            </p>
+</body>
+</html>
