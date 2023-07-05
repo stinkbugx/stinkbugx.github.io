@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script to Move Camera with Player</title>
+    <link rel="stylesheet" href="script.css">
+</head>
+<body>
+    <h1>Script to Move Camera with Player</h1>
+    <p class="dent1">
+        using System.Collections; <br>
+        using System.Collections.Generic; <br>
+        using UnityEngine; <br>
+        <br>
+        public class <b>SCRIPT NAME HERE</b> : MonoBehaviour <br>
+        {
+        </p>
+            <p class="dent2">
+            //variable to access the "cameraPosition" object <br>
+            public Transform cameraPosition; <br>
+            <br>
+            private void Update() <br>
+            {
+            </p>
+                <p class="dent3">
+                //moves the camera to match the position of the "cameraPosition" empty object <br>
+                transform.position = cameraPosition.position;
+                </p>
+            <p class="dent2">
+            }
+            </p>
+        <p class="dent1">
+        }
+    </p>
+</body>
+</html>

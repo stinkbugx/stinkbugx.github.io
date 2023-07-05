@@ -3,18 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=>, initial-scale=1.0">
-    <title>Document</title>
+    <title>Script to move player</title>
+    <link rel="stylesheet" href="script.css">
 </head>
 <body>
-    <h1>Jump script</h1>
-    <p>public Rigidbody rb; <br>
-        public float jumpAmount = 10; <br>
-        void Update() <br>
-        { <br>
-            if (Input.GetKeyDown(KeyCode.Space)) <br>
-            { <br>
-                rb.AddForce(Vector3.up * jumpAmount, ForceMode3D.Impulse); <br>
+    <h1>Script to Move Player</h1>
+    <p class="dent1">
+        using System.Collections; <br>
+        using System.Collections.Generic; <br>
+        using UnityEngine; <br>
+        <br>
+        public class <b>SCRIPT NAME HERE</b> : MonoBehaviour <br>
+        {
+        </p>
+            <p class="dent2">
+            [Header("Movement")] //creates an entirely new component with this header <br>
+            public float moveSpeed; //changeable speed variable <br>
+            <br>
+            public Transform orientation; //accesses the orientation <br>
+            <br>
+            float horizontalInput; //input for horizontal movement <br>
+            float verticalInput; //inpurt for vertical movement <br>
+            <br>
+            Vector3 moveDirection; <br>
+            <br>
+            Rigidbody rb; //variable we will use to access rigid body <br>
+            <br>
+            void Start() <br>
+            {
+            </p>
+                <p class="dent3">
+                rb = GetComponent&lt;Rigidbody&gt;(); //accesses the rigid body <br>
+                rb.freezeRotation = true; //freezes the rigid body rotation
+                </p>
+            <p class="dent2">
             } <br>
-        }</p>
+            <br>
+            //new function to process input <br>
+            private void MyInput() <br>
+            { 
+            </p>
+                <p class="dent3">
+                horizontalInput = Input.GetAxisRaw("Horizontal"); //recieves horizontal input <br>
+                verticalInput = Input.GetAxisRaw("Vertical"); //recieves vertical input 
+                </p>
+            <p class="dent2">
+            } <br>
+            <br>
+            void Update() <br>
+            { 
+            </p>
+                <p class="dent3">
+                MyInput(); //calls input function 
+                </p>
+            <p class="dent2">
+            } <br>
+            <br>
+            //new function, similar to update <br>
+            private void FixedUpdate() <br>
+            { 
+            </p>
+                <p class="dent3">
+                MovePlayer(); //calls move function 
+                </p>
+            <p class="dent2">
+            } <br>
+            <br>
+            //new function to move the player <br>
+            private void MovePlayer() <br>
+            { 
+            </p>
+                <p class="dent3">
+                moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput; <br>
+                //moves the player depending on the orientation and the input <br>
+                //this way the player moves in the direction they are looking <br>
+                <br>
+                rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force); <br>
+                //actually propels them forward using the rigid body component 
+                </p>
+            <p class="dent2">
+            }
+            </p>
+        <p class="dent1">
+        }
+    </p>    
 </body>
 </html>

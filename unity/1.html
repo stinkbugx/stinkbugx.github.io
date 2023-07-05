@@ -4,26 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Script to Rotate Camera</title>
+    <link rel="stylesheet" href="script.css">
 </head>
 <body>
-    <h2>Movement script</h2>
-    <p>
-        using UnityEngine; <br>
-public class Character : MonoBehaviour <br>
-{ <br>
-    private CharacterController characterController; <br>
-    public float Speed = 5f; <br>
-    void Start() <br>
-    { <br>
-        characterController = GetComponent&lt;CharacterController&gt;(); <br>
-    } <br>
-    void Update() <br>
-    { <br>
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")); <br>
-        characterController.Move(move * Time.deltaTime * Speed); <br>
-    } <br>
-}
+    <h1>Script to Rotate Camera</h1>
+    <p class="dent1">
+        using System.Collections; <br>
+        using System.Collections.Generic;  <br>
+        using UnityEngine;  <br>
+        <br>
+        public class <b>SCRIPT NAME HERE</b> : MonoBehaviour <br>
+        { 
+        </p>
+            <p class="dent2">
+            //changeable sensitivity variables for x and y <br>
+            public float sensX; <br>
+            public float sensY; <br>
+            <br>
+            //transform variable to connect to the object's tranformation properties <br>
+            public Transform orientation; <br>
+            <br>
+            //rotation variables for x and y <br>
+            float rotationX; <br>
+            float rotationY; <br>
+            <br>
+            void Start() <br>
+            { 
+            </p>
+                <p class="dent3">
+                Cursor.lockState = CursorLockMode.Locked; //locks cursor to the middle of the screen <br>
+                Cursor.visible = false; //makes the cursor invisible 
+                </p>
+            <p class="dent2">
+            } <br>
+            <br>
+            private void Update() <br>
+            { 
+            </p>
+                <p class="dent3">
+                //getting mouse inputs for x and y <br>
+                float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX; <br>
+                float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY; <br>
+                <br>
+                //math for rotation respective to mouse input, convoluted but correct <br>
+                rotationY += mouseX; //adds mouseX variable to rotationY <br>
+                rotationX -= mouseY; //subtracts mouseY from rotationX <br>
+                <br>
+                rotationX = Mathf.Clamp(rotationX, -90f, 90f); //restricts the x rotation from going too far <br>
+                <br>
+                //rotating the character and camera <br>
+                transform.rotation = Quaternion.Euler(rotationX, rotationY, 0); //0 for the z value <br>
+                orientation.rotation = Quaternion.Euler(0, rotationY, 0); //0 for x and z, only need to change y for camera since it follows the player <br>
+                </p>
+            <p class="dent2">
+            }
+            </p>
+        <p class="dent1">
+        }        
     </p>
 </body>
 </html>
