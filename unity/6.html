@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script to Hurt/Heal Player</title>
+    <link rel="stylesheet" href="script.css">
+</head>
+<body>
+    <h1>Script to Hurt/Heal Player</h1>
+    <p class="dent1">
+        using System.Collections; <br>
+        using System.Collections.Generic; <br>
+        using UnityEngine; <br>
+        <br>
+        public class <b>Heal</b>Player : MonoBehaviour <br>
+        {
+        </p>
+            <p class="dent2">
+            public int amount; <br>
+            //collision detector function <br>
+            private void OnCollisionEnter(Collision hit) <br>
+            {
+            </p>
+                <p class="dent3">
+                if (hit.gameObject.tag == "Player") //if a player is colliding <br>
+                {
+                </p>
+                    <p class="dent4">
+                    var healthComponent = hit.gameObject.GetComponent&lt;Health&gt;(); <br>
+                    //GetComponent&lt;Health&gt;(); //gets the health of the player that collided <br>
+                    if (healthComponent != null) //if the player DOES have a health component
+                    </p>
+                        <p class="dent5">
+                        healthComponent.<b>Heal</b>Damage(amount); //runs take damage function
+                        </p>
+                    <p class="dent4">
+                    }
+                    </p>
+                <p class="dent3">
+                }
+                </p>
+            <p class="dent2">
+            }
+            </p>    
+        <p class="dent1">
+        }
+        </p>
+</body>
+</html>
