@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script for Enemy Chasing</title>
+    <link rel="stylesheet" href="script.css">
+</head>
+<body>
+    <h1>Script for Enemy Chasing</h1>
+    <p class="dent1">
+    using System.Collections; <br>
+    using System.Collections.Generic; <br>
+    using UnityEngine; <br>
+    <br>
+    public class chasePlayer : MonoBehaviour <br>
+    {
+    </p>
+        <p class="dent2">
+        //set the values in the inspector <br>
+        public Transform target; //drag and stop player object in the inspector <br>
+        public float range; <br>
+        public float speed; <br>
+        <br>
+        Rigidbody rb; //variable we will use to access rigid body <br>
+        <br>
+        void Start() <br>
+        {
+        </p>
+            <p class="dent3">
+            rb = GetComponent&lt;Rigidbody&gt;(); //accesses the rigid body <br>
+            rb.freezeRotation = true; //freezes the rigid body rotation
+            </p>
+        <p class="dent2">
+        } <br>
+        <br>
+        public void FixedUpdate() <br>
+        {
+        </p>
+            <p class="dent3">
+            //get the distance between the player and enemy (this object) <br>
+            float dist = Vector3.Distance(target.position, transform.position); <br>
+            //check if it is within the range you set <br>
+            if (dist &lt;= range) <br>
+            { <br>
+                //move to target(player)  <br>
+                transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed/20); <br>
+            } <br>
+            //else, if it is not in rage, it will not follow player
+            </p>
+        <p class="dent2">
+        }
+        </p>
+    <p class="dent1">
+    }
+    </p>
+</body>
+</html>
