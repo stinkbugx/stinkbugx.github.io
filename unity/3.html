@@ -19,6 +19,17 @@
             <p class="dent2">
             [Header("Movement")] //creates an entirely new component with this header <br>
             public float moveSpeed; //changeable speed variable <br>
+            public float runSpeed; <br>
+            <br>
+            <b class="newCode">
+            [Header("Jumping")] <br>
+            public float jumpForce; <br>
+            public float jumpCoolDown; <br>
+            bool readyToJump; <br>
+            <br>
+            [Header("Keybinds")] <br>
+            public KeyCode jumpKey = KeyCode.Space; <br>
+            </b>
             <br>
             public Transform orientation; //accesses the orientation <br>
             <br>
@@ -34,7 +45,8 @@
             </p>
                 <p class="dent3">
                 rb = GetComponent&lt;Rigidbody&gt;(); //accesses the rigid body <br>
-                rb.freezeRotation = true; //freezes the rigid body rotation
+                rb.freezeRotation = true; //freezes the rigid body rotation <br>
+                <b class="newCode">readyToJump = true;</b>
                 </p>
             <p class="dent2">
             } <br>
@@ -54,8 +66,23 @@
             { 
             </p>
                 <p class="dent3">
-                MyInput(); //calls input function 
+                MyInput(); //calls input function  <br>
+                <b class="newCode">
+                //when to jump <br>
+                if(Input.GetKey(jumpKey) && readyToJump) <br>
+                {
                 </p>
+                    <p class="dent4">
+                    readyToJump = false; <br>
+                    <br>
+                    Jump(); <br>
+                    <br>
+                    Invoke(nameof(ResetJump), jumpCoolDown);
+                    </p>
+                <p class="dent3">
+                }
+                </p>
+                </b>
             <p class="dent2">
             } <br>
             <br>
@@ -64,7 +91,21 @@
             { 
             </p>
                 <p class="dent3">
-                MovePlayer(); //calls move function 
+                if (Input.GetKey(KeyCode.LeftShift)) <br>
+                {    
+                </p>
+                    <p class="dent4">
+                    RunPlayer(); //calls run function
+                    </p>
+                <p class="dent3">
+                } else <br>
+                {   
+                </p>
+                    <p class="dent4">
+                    MovePlayer(); //calls move function
+                    </p>
+                <p class="dent3">
+                }
                 </p>
             <p class="dent2">
             } <br>
@@ -82,7 +123,43 @@
                 //actually propels them forward using the rigid body component 
                 </p>
             <p class="dent2">
+            } <br>
+            <br>
+            private void RunPlayer() <br>
+            {
+            </p>
+                <p class="dent3">
+                moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput; <br>
+                //moves the player depending on the orientation and the input <br>
+                //this way the player moves in the direction they are looking <br>
+                <br>
+                rb.AddForce(moveDirection.normalized * runSpeed * 10f, ForceMode.Force);
+                </p>
+            <p class="dent2">
+            } <br>
+            <br>
+            <b class="newCode">
+            private void Jump() <br>
+            {
+            </p>
+                <p class="dent3">
+                //reset y velocity <br>
+                rb.velocity = new Vector3(); <br>
+                <br>
+                rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+                </p>
+            <p class="dent2">
+            } <br>
+            <br>
+            private void ResetJump() <br>
+            {
+            </p>
+                <p class="dent3">
+                readyToJump = true;
+                </p>
+            <p class="dent2">
             }
+            </b>
             </p>
         <p class="dent1">
         }
