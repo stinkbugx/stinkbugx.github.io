@@ -36,7 +36,7 @@
 
 }
 
-@media not (max-height: 800px) {
+@media not (max-height: 600px) {
     #tallScreen {
      background-color: orange;
     }

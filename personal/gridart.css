@@ -1,0 +1,19 @@
+#grid-parent{
+    display:grid;
+    flex-wrap: wrap;
+    grid-template-columns: auto auto auto;
+}
+
+#block2{
+    display:grid;
+    flex-wrap: wrap;
+    grid-template-columns: auto auto;
+}
+
+#block1{
+    background-color: grey;
+}
+
+#o11{
+    grid-column-start: 1;
+}

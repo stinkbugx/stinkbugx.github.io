@@ -34,8 +34,10 @@ body{
     grid-template-columns: auto auto auto;
 }
 
+
+
 #grid-parent h1{
-    background-color: grey;
+    /*background-color: grey;*/
     padding:3vw 3vh;
     margin:2vw;
     text-align: center;
@@ -44,4 +46,20 @@ body{
 #no0 {
     grid-column-start: 2;
     grid-column-end: 3;
+}
+
+.grid-child{
+    background-color: purple;
+}
+
+#no7{
+    background-color: green;
+}
+
+.images{
+    width: 10px;
+}
+
+#image1{
+    width: 20px;
 }
